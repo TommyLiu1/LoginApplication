@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Login</title>
+	</head>
+<body bgcolor="#ffffff" TEXT="#000000" >
+	<div align="left">
+		<table width="715" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="584">
+					<div align="left">
+						<table width="584" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<font size="-1">
+										<b>Enter a user name and password and click [Log In].</b>
+									</font>
+								</td>
+							</tr>
+						</table>
+						<form name="login" action="/login" method="post">
+						<input type="HIDDEN" name="uri" value="%%RLS_KEY_DIRECT_URL" size="30">
+						<table width="250" border="0" cellspacing="0" cellpadding="0">
+							<tr height="70">
+								<td height="70">
+									<div align="right">
+										<font size="-1">
+											<b>User Name: </b>
+										</font>
+										<input type="TEXT" name="userID" size="20" maxlength="32"><br>
+										<font size="-1">
+											<b>Password : </b>
+										</font><input type="PASSWORD" name="password" size="20" maxlength="32">
+										<input type="submit" name="" value="Log In" size="30">
+									</div>
+								</td>
+							</tr>
+						</table>
+						</form>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

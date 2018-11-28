@@ -1,0 +1,48 @@
+Manifest-Version: 1.1
+Bundle-Vendor: Inepro
+Bundle-Version: 4.0.2.2
+Bundle-Activator: com.inepro.service.login.Activator
+Bundle-Description: Login Application
+Bundle-Name: Login Application
+Bundle-ClassPath: .,lib/DistributableSoftware.jar,
+ lib/login.jar,
+ lib/jackson-databind-2.2.3.jar,
+ lib/jackson-annotations-2.2.3.jar,
+ lib/jackson-core-2.2.3.jar,
+ lib/atk.jar
+Export-Package: com.canon.meap.service.login, com.canon.meap.service.sa
+Export-Service: com.canon.meap.service.login.LocalLoginService,
+ com.canon.meap.service.login.ContextualLoginService,
+ com.canon.meap.service.login.RemoteLoginService,
+ com.canon.meap.service.sa.SecurityAgent, 
+ com.canon.meap.security.acq.login.ACQApplicationControl,
+ com.canon.meap.service.login.InternalLoginService
+Import-Package: javax.servlet,
+ javax.servlet.http,
+ com.canon.meap.service.avs, 
+ com.canon.meap.service.avs.login,
+ com.canon.meap.service.dwindow
+Import-Service: org.osgi.service.http.HttpService,
+ com.canon.meap.service.login.RemoteLoginService,
+ com.canon.meap.service.http.HttpService,
+ com.canon.meap.service.avs.login.LoginServiceRegister,
+ com.canon.meap.service.avs.login.CLSLoginServiceContext,
+ com.canon.meap.service.log.LogService,
+ com.canon.meap.service.scms.SharedCredentialManagementService
+Application-Id: 07ca3dec-b674-41d0-af9e-9c37583b08bb
+DeviceSpecification-Ids: *
+SystemApplicationType: LoginService
+Applet-Name: UserLogin
+MEAPSpecVersion: 5,11,13,37,92,107,108
+MaximumMemoryUsage: 500
+MaximumThreadUsage: 1
+MaximumFilespaceUsage: 2500
+MaximumFiledescriptorUsage: 7
+MaximumSocketUsage: 0
+MinimumConsoleSize: 800x520
+Locales: en
+ConnectingPorts: 
+ListeningPorts: 
+FeatureRequired: com.canon.meap.securityfunction.AccessControl;meap-spec-version=11
+FeatureCompatible: com.canon.meap.securityfunction.AccessControl
+AMS_MODE: OFF

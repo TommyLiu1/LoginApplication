@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<project name="${target}" default="all" basedir=".">
+
+  <property file="build.properties"/>
+  <property name="source"   location="./src"/>
+  <property name="packing"  location="./packing"/>
+  <property name="manifest" location="./manifest/manifest.txt"/>
+
+  <property name="build"    location="./build"/>
+  <property name="dist"     location="./dist"/>
+
+  <target name="clean">
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+  </target>
+
+  <target name="compile">
+    <mkdir dir="${build}"/>
+    <javac srcdir="${source}" destdir="${build}" target="1.8" debug="true" includeantruntime="false">
+      <classpath>
+        <fileset dir="${path.meap}"/>
+        <fileset dir="${path.login}"/>
+      </classpath>
+      <compilerarg line="-encoding UTF-8"/>
+    </javac>
+  </target>
+
+  <target name="makejar">
+    <copy todir="${build}/lib" overwrite="on">
+      <fileset dir="${path.meap}">
+        <include name="${bundle.meap1}"/>
+        <include name="${bundle.meap2}"/>
+      	 <include name="${bundle.meap3}"/>
+      	 <include name="${bundle.meap4}"/>
+      	 <include name="${bundle.meap5}"/>
+      </fileset>
+      <fileset dir="${path.login}">
+        <include name="${bundle.login}"/>
+      </fileset>
+    </copy>
+
+    <mkdir dir="${dist}"/>
+    <jar destfile="${dist}/${target}.jar" manifest="${manifest}" compress="false">
+      <fileset dir="${build}"/>
+      <fileset dir="${packing}"/>
+    </jar>
+  </target>
+
+  <target name="all">
+    <antcall target="clean"/>
+    <antcall target="compile"/>
+    <antcall target="makejar"/>
+  </target>
+
+</project>

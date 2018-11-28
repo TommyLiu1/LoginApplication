@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="F:/MEAP sdk 530/MEAP_SDK_V530/MEAPPart/Environment_on_PC/lib/servlet.jar"/>
+	<classpathentry kind="lib" path="F:/MEAP sdk 530/MEAP_SDK_V530/MEAPPart/Environment_on_PC/atk/atk.jar"/>
+	<classpathentry kind="lib" path="G:/liuying/Sample/Login_SDK/login.jar"/>
+	<classpathentry kind="lib" path="G:/liuying/Sample/Login_SDK/LoginReference.jar"/>
+	<classpathentry kind="lib" path="G:/liuying/Sample/MEAP_SDK/meap.jar"/>
+	<classpathentry kind="lib" path="G:/liuying/Sample/MEAP_SDK/osgi.jar"/>
+	<classpathentry kind="lib" path="G:/liuying/Sample/MEAP_SDK/jackson-annotations-2.2.3.jar"/>
+	<classpathentry kind="lib" path="G:/liuying/Sample/MEAP_SDK/jackson-core-2.2.3.jar"/>
+	<classpathentry kind="lib" path="G:/liuying/Sample/MEAP_SDK/jackson-databind-2.2.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
